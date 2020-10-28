@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+<default>
+<carriers>
+<moovin>
+<model>Imagineer\Moovin\Model\Carrier\Customshipping</model>
+<active>1</active>
+<lat>9.929652</lat>
+<lon>-84.134719</lon>
+<sort_order>15</sort_order>
+<sallowspecific>0</sallowspecific>
+<price>0</price>
+<name>Moovin</name>
+<title>Envío express</title>
+<specificerrmsg>Este método no está disponible o ingresó un código postal inválido.</specificerrmsg>
+</moovin>
+</carriers>
+</default>
+</config>

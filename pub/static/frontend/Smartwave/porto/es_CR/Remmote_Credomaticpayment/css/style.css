@@ -1,0 +1,62 @@
+/* 3D Secure redirect */
+.threedsecure-redirect{
+    text-align: center;
+}
+
+.threedsecure-redirect h1{
+	text-align: center;
+}
+
+.threedsecure-redirect img{
+	margin:0 auto;
+}
+
+@media only screen and (max-width: 480px) { /* Smartphones */
+	.threedsecure-redirect img{
+		width: 100%;
+	}
+}
+
+/* Checkout */
+#credomaticpayment_creditcard_cc_type_exp_div.has-cvv{
+        width: 250px;
+        float: left;
+}
+
+#credomaticpayment-accepted-cards img {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+
+a.credomaticpayment-cvv-tooltip {outline:none; }
+a.credomaticpayment-cvv-tooltip strong {line-height:30px;}
+a.credomaticpayment-cvv-tooltip:hover {text-decoration:none;} 
+a.credomaticpayment-cvv-tooltip span {
+    z-index:10;
+    display:none; 
+    padding:14px 20px;
+    margin-top:32px; 
+    margin-left:-160px;
+    width:280px; 
+    line-height:16px;
+}
+a.credomaticpayment-cvv-tooltip:hover span{
+    display:inline; 
+    position:absolute; 
+    border:1px solid #DCA; 
+    background:#fffAF0; 
+}
+.callout {
+	z-index:20;
+	position:absolute;
+	border:0;
+	top:-12px;
+	left:120px;
+}
+    
+/*CSS3 extras*/
+a.credomaticpayment-cvv-tooltip span
+{
+    border-radius:2px;
+}

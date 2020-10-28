@@ -1,0 +1,6 @@
+<!--@subject {{trans "Codigo QR Moovin"}} @-->
+<h4>Orden: {{var data.orden|raw}}</h4>
+<h4>Cliente: {{var data.cliente|raw}}</h4>
+<p><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{var data.qr|raw}}" alt="{{var data.qrString|raw}}"> </p>
+<br><br>
+<img src="{{view url='Imagineer_Moovin/images/LogoMoovin.png'}}" height="60" width="200" alt="{{trans 'Logo Moovin'}}" />

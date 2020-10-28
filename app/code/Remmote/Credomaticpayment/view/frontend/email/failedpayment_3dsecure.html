@@ -1,0 +1,13 @@
+<!--@subject Pago rechazado para orden #{{var orderNumber}} @-->
+
+{{template config_path="design/email/header_template"}} 
+<table>
+	<tr class="email-intro">
+		<td>
+			<h3>Pago rechazado</h3>
+			<p>Lo sentimos, tu pago para la orden <strong>#{{var orderNumber}}</strong> fue rechazado y la orden fue cancelada.</p>
+			<p>Por favor vuelve a intentar y verifica que los datos de tu tarjeta sean los correctos y que tu banco no esté rechazado las transacciones.</p>
+ 		</td>
+ 	</tr>
+ </table>
+{{template config_path="design/email/footer_template"}}

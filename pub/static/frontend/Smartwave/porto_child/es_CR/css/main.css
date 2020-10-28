@@ -1,0 +1,102 @@
+.page-header.header-newskin .minicart-wrapper .action.showcart:before, .page-header.header-newskin .minicart-wrapper .action.showcart.active:before {
+    content: '\f814' !important;
+    font-size: 29px;
+    line-height: 32px;
+}
+/* variables globales */
+:root{
+	--primario: #E42227;
+	--secundario: #FFDD00;
+	--tam: 2rem;	
+}
+.page-header{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+#maincontent{
+	padding-left: 3%;
+	padding-right: 3%;
+}
+.item-qty.cart-item-qty{
+	margin-left: 30px !important;
+}
+.block.crosssell{
+	width: 100% !important;
+}
+.page-header{
+		padding: 0!important;
+}
+.header.content{
+		padding: 0!important;
+}
+.logo{
+	margin-left: 10% !important;
+	margin-top: 8px !important;
+
+}
+.logo > img{
+	width: 50% !important;
+	margin-top: 13px !important;
+
+}
+.minicart-wrapper{
+	margin-right: 10% !important;
+	margin-top: 13px !important;
+}
+.search-area{
+	margin-top: 13px !important;	
+}
+.navigation.sw-megamenu {
+	padding: 17px !important;
+}
+.level-top{
+	font-weight: 700 !important;
+}
+.ui-menu-item.level1 > .subchildmenu{
+	z-index: 999 !important
+}
+.footer-bottom .container:before{
+	background-color: unset !important;
+}
+.opc-progress-bar-item._active:before{
+	background: #EB0029 !important;
+}
+.opc-progress-bar-item._active > span:before  {
+	background: #EB0029 !important;
+}
+.action.primary{
+	background: #EB0029 !important;
+    border: none !important;
+}
+.action.primary:hover{
+	background: #a4001d !important;
+}
+.action.primary > span{
+	font-family:Montserrat !important;
+	color: white !important;
+}
+.action.action-apply{
+	background: #EB0029 !important;
+    border: none !important;
+}
+.action.action-apply:hover{
+	background: #a4001d !important;
+}
+.action.action-apply > span{
+	font-family:Montserrat !important;
+	color: white !important;
+}
+.product-item.tocart:before{
+    content: '' !important;
+}
+@media only screen and (max-width: 600px) {
+	.logo > img{
+		width: 35% !important;
+	}
+	.field.search > .label{
+		margin-top: -41px !important;
+	}
+	.politicas{
+		display: block !important;
+	}
+}

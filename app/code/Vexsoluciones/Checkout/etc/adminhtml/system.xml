@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vexsoluciones_checkout" translate="label" sortOrder="3001">
+            <label>Checkout</label>
+        </tab>
+         <section id="vexsolucionescheckout" translate="label" type="text" sortOrder="010606" showInDefault="1" showInWebsite="0"
+                 showInStore="0">
+            <label>General Settings</label>
+            <tab>vexsoluciones_checkout</tab>
+            <resource>Vexsoluciones_Checkout::settings</resource>
+            <group id="general" sortOrder="10" translate="label" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Settings</label>
+
+                <field id="tienda" sortOrder="10" translate="label comment" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Ubicación del almacen</label>
+                    <validate>required-entry</validate> 
+                    <comment>Latitud,Longitud</comment>
+                </field>
+                <field id="key" sortOrder="10" translate="label comment" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Api key Google</label>
+                    <validate>required-entry</validate>
+                </field>
+                
+
+            </group>
+        </section>
+
+    </system>
+</config>

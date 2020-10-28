@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2020 remmote.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="credomatic" translate="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <group id="info" translate="label" type="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <frontend_model>Remmote\Credomaticpayment\Block\System\Config\Info</frontend_model>
+                </group>
+                <label>Credomatic Payment Gateway</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable Method</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Extension built by <a href="https://www.remmote.com/" target="_blank">Remmote</a>. <br/> <strong> Extension version: 2.1.1 </strong>]]></comment>
+                </field>
+                <field id="domain_name" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Domain Name</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                    <comment><![CDATA[The domain name where you are using the extension. Needed to activate the extension.]]></comment>
+                </field>
+                <field id="license_key" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>License Key</label>
+                    <comment><![CDATA[Please get in touch with us to get your License Key.]]></comment>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>                
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                    <comment><![CDATA[The name that will be displayed in the checkout page for this payment method.]]></comment>
+                </field>
+                <field id="key_id" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Key ID</label>
+                    <comment><![CDATA[To get your Key ID, login to <a href="https://credomatic.compassmerchantsolutions.com/merchants/" target="_blank">Credomatic Admin Panel</a> and in the left menu, go to <strong>Options</strong> > Settings. Then go to the section <strong>Security Options</strong> and click on <strong>Security Keys</strong>. You will find your Key ID and Key values there.]]></comment>
+                </field>
+                <field id="key" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Key</label>
+                </field>
+                <field id="credomatic_endpoint" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Credomatic Endpoint</label>
+                    <comment><![CDATA[Default value of Credomatic Endpoint. You don't have to change this value. ONLY change it if you know what you are doing.]]></comment>
+                </field>
+                <field id="payment_action" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Transaction Type</label>
+                    <source_model>Remmote\Credomaticpayment\Model\Source\PaymentAction</source_model>
+                    <comment><![CDATA[If <strong> Authorize and Capture </strong>(Sale), the transaction will be automatically charged on your customer's credit card. If <strong>Authorize</strong>(auth), the transaction will put the money in reserve and it will be only charged when you generate the invoice from Magento admin Panel or when you capture the money from Credomatic Admin Panel.]]></comment>
+                </field>
+                <field id="order_status" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>New order status</label>
+                    <source_model>Magento\Sales\Model\Config\Source\Order\Status</source_model>
+                </field>
+                <field id="cctypes" translate="label" type="multiselect" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Accepted Credit Cards</label>
+                    <source_model>Remmote\Credomaticpayment\Model\Source\Cctype</source_model>
+                    <comment><![CDATA[The card types you want to accept. Make sure your merchant account support the cards type you want to accept.]]></comment>
+                    <validate>validate-no-empty</validate>
+                </field>
+                <field id="useccv" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Include CVV</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Set to <strong>Yes</strong> if you want to display the CVV field in the checkout page. <strong>Note:</strong> You don't need to enable the CVV verification in your Credomatic Admin Panel, this option might represent extra cost.]]></comment>
+                </field>
+
+                <field id="multiple_currencies" translate="label" type="select" sortOrder="95" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable multiple currencies</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If you have more than one website configured and each website will have a different currency, enable this option and enter the Processor ID corresponding to each store view.</comment>
+                </field>
+                <field id="processor_id" translate="label" type="text" sortOrder="98" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Processor ID</label>
+                    <comment><![CDATA[Enter the Processor ID for this website. Make sure to change the <strong>Store View</strong> to enter a different value for each website you have configured in your Magento instance.]]></comment>
+                    <depends>
+                        <field id="multiple_currencies">1</field>
+                    </depends>
+                </field>
+                <!-- <field id="failedpayment_email" translate="label" type="text" sortOrder="91" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Email failed payments </label>
+                    <comment><![CDATA[Enter an email to be notified when a payment is declined or not processed for Credomatic 3D Secure transactions. If empty, the email will be sent to the sales representative email configured in the store.]]></comment>
+                    <validate>validate-email</validate>
+                </field> -->
+                <!-- <field id="failedpayment_template" translate="label" type="select" sortOrder="92" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Transactional email for failed payments </label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <comment><![CDATA[Choose a template email for failed payments via 3D Secure ]]></comment>
+                </field> -->
+                <field id="sort_order" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="debug_enabled" translate="label" type="select" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Debug</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[If enabled, information about the API call Request and Response will be written to the file var/log/system.log. Make sure to disable this option and <strong>remove</strong> the log file after you finish your debugging process.]]></comment>
+                </field>
+
+            </group>
+        </section>
+
+    </system>
+</config>

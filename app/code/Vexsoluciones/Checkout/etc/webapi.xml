@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route url="/V1/listarDepartamentos/:pais" method="GET">
+        <service class="Vexsoluciones\Checkout\Api\CheckoutInterface" method="listardepartamentos"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/listarProvincias/:departamento" method="GET">
+        <service class="Vexsoluciones\Checkout\Api\CheckoutInterface" method="listarprovincias"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/listarDistritos/:provincia" method="GET">
+        <service class="Vexsoluciones\Checkout\Api\CheckoutInterface" method="listardistritos"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/listarTienda/" method="GET">
+        <service class="Vexsoluciones\Checkout\Api\CheckoutInterface" method="listartiendas"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/listarPaises/" method="GET">
+        <service class="Vexsoluciones\Checkout\Api\CheckoutInterface" method="listarpaises"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+</routes>

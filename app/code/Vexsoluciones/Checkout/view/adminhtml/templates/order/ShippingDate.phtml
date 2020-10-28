@@ -1,0 +1,42 @@
+<?PHP 
+
+$shippingDate = $block->getShippingDate();
+ 
+if($shippingDate !== FALSE){ 
+
+?>
+ 
+<div class="stock_info_pickup" style="margin:15px 0 25px 0;">
+
+	<div class="admin__page-section-title">
+		<span class="title"> Datos de envío </span>
+	</div>
+
+	
+
+	<div style="margin-top: 5px;"> 
+		<b> Provincia:  </b>
+		<?PHP echo $shippingDate['departamento']; ?>
+	</div>
+ 	
+	<div style="margin-top: 5px;"> 
+		<b> Cantón:  </b>
+		<?PHP echo $shippingDate['provincia']; ?>
+
+	</div>
+	<div style="margin-top: 5px;"> 
+		<b> Distrito:  </b>
+		<?PHP echo $shippingDate['distrito']; ?>
+	</div>
+	<!--<div style="margin-top: 5px;"> 
+		<b> Coordenadas:  </b>
+		<?PHP echo $shippingDate['location']; ?>
+	</div>-->
+	
+</div>
+
+<?PHP 
+
+}
+
+?>

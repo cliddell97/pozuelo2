@@ -1,0 +1,113 @@
+/* For mobile phones: */
+h4{
+	color: var(--primario);
+	font-weight: 500;
+}
+.rowRes{
+	margin-left: -5% !important;
+}
+#personaliza{
+	width: 60%; 
+}
+p{
+	color: var(--primario) !important;
+	font-weight: 500 !important;
+	font-size: var(--tam) !important;
+}
+#consulta{
+	margin-top: 11%;
+	width:55%;
+	font-size: 2rem;
+	height: 50px;
+}
+#empecemos{
+	font-size: 4rem;
+	margin-left:2%;
+}	
+.iconoRes{
+	width: 50% !important;
+	margin: 0 auto;
+	margin-top: 7%;
+	margin-bottom: 4%;
+}
+
+/* For tablets: */
+@media only screen and (min-width: 768px) {	
+    span{
+        font-size: var(--tam);
+    }
+	h4{
+		color: var(--primario) !important;
+		font-weight: 500;
+	}
+	#empecemos{
+		font-size: 4rem;
+		margin-left:2%;
+	}
+	#consulta{
+		margin-top: 11%;
+		width:55%;
+		font-size: 2rem;
+		height: 50px;
+	}
+	p{
+		color: var(--primario) !important;
+		font-weight: 500 !important;
+		font-size: var(--tam) !important;
+	}
+	#personaliza{
+		width: 60%; 
+	}
+	.iconoRes{
+		width: 60% !important; 
+		margin-top: 10%;
+		margin-left: 40%; 
+		margin-right: 1%;
+	}
+}
+
+/* For desktop: */
+@media only screen and (min-width: 1200px) {
+	
+    span{
+        font-size: var(--tam);
+    }
+	h4{
+		color: var(--primario) !important;
+		font-weight: 500;
+	}
+	#empecemos{
+		font-size: 4rem;
+		margin-left:2%;
+	}
+	#consulta{
+		margin-top: 11%;
+		width:55%;
+		font-size: 2rem;
+		height: 50px;
+	}
+	p{
+		color: var(--primario) !important;
+		font-weight: 500 !important;
+		font-size: var(--tam) !important;
+	}
+	#personaliza{
+		width: 60%; 
+		margin-top: 30%;
+	}
+	.iconoRes{
+		width: 60% !important; 
+		margin-top: 10%;
+		margin-left: 40%; 
+		margin-right: 1%;
+	}
+	.rowRes{
+		margin-left: -0% !important;
+	}
+	#blogRect{
+		border-right: solid white 20px;
+	}
+	#planetaRect{
+		border-left: solid white 20px;
+	}
+}

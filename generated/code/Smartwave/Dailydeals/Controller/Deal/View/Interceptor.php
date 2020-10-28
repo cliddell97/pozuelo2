@@ -1,0 +1,29 @@
+<?php
+namespace Smartwave\Dailydeals\Controller\Deal\View;
+
+/**
+ * Interceptor class for @see \Smartwave\Dailydeals\Controller\Deal\View
+ */
+class Interceptor extends \Smartwave\Dailydeals\Controller\Deal\View implements \Magento\Framework\Interception\InterceptorInterface
+{
+    use \Magento\Framework\Interception\Interceptor;
+
+    public function __construct(\Magento\Framework\App\Action\Context $context, \Magento\Framework\View\Result\PageFactory $pageFactory, \Magento\Backend\Model\View\Result\RedirectFactory $resultRedirectFactory, \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig)
+    {
+        $this->___init();
+        parent::__construct($context, $pageFactory, $resultRedirectFactory, $scopeConfig);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function dispatch(\Magento\Framework\App\RequestInterface $request)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'dispatch');
+        if (!$pluginInfo) {
+            return parent::dispatch($request);
+        } else {
+            return $this->___callPlugins('dispatch', func_get_args(), $pluginInfo);
+        }
+    }
+}

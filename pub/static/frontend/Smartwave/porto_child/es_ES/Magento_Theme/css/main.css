@@ -1,0 +1,77 @@
+/* variables globales */
+:root{
+	--primario: rgb(53,81,107);
+	--secundario: rgb(46,160,222);
+	--tam: 20px;
+}
+
+/* custom fonts */
+@font-face {
+		font-family: "Sensations and Qualities";
+		src: url("../fonts/Sensations and Qualities.ttf");
+		font-weight: 300;
+		font-style: normal
+	}
+@font-face {
+	font-family: 'Lato-Light';
+	src: url('../fonts/Lato-Light.ttf');
+	font-weight: 300;
+	font-style: normal
+}
+@font-face {
+	font-family: "Lato-Regular";
+	src: url("../fonts/Lato-Regular.ttf");
+	font-weight: 300;
+	font-style: normal
+}
+
+/*Estilos generales de la pagina*/
+
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+
+	.header, .content{
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+	}
+	.minicart-wrapper{
+		right: 1%
+		
+	}
+	.block-search{
+		position:absolute;
+		top:50%;
+		right:8%;
+	}
+	.sections.nav-sections{
+		width: 100%;
+		background: white;
+	}
+	.navigation{
+		max-width:100% !important;
+		width:100% !important;
+		background: white !important;
+		margin-top: 1%;
+	}
+	.level0{
+		padding-left: 1.5%;
+		padding-right: 1.5%;
+	}
+	.level0:hover{
+		color: var(--secundario);
+	}
+	.level1:hover{
+		background: var(--secundario);
+		color:white;
+	}
+	.ui-icon-carat-1-e{
+		color: var(--secundario);
+	}
+}

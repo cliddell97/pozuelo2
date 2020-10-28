@@ -1,0 +1,121 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form class="form form-shipping-address" id="co-shipping-form" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
+    <!-- ko foreach: getRegion('before-fields') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <!--/ko-->
+    <div id="shipping-new-address-form" class="fieldset address">
+        <!-- ko foreach: getRegion('additional-fieldsets') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+
+        <div class="field _required"  
+             name="shippingAddress.departamento">
+            
+            <label class="label">
+               
+                <span> Seleccione el país destino </span>
+               
+            </label>
+
+            <div class="control">
+                
+                <select id="vex_paises" 
+     class="shipping_select ubigeo_new_address_form" 
+     data-bind="options: currentCountry, 
+                optionsText: 'text',  
+                value: ubigeoPais"></select>
+                                
+            </div>
+
+        </div>
+
+        <div class="field _required"  
+             name="shippingAddress.departamento" data-bind="fadeVisible: isCountryLocal()">
+            
+            <label class="label">
+               
+                <span> Provincia </span>
+               
+            </label>
+
+            <div class="control">
+                
+                <select id="selRecojoUbigeoDepartamento" 
+         class="shipping_select ubigeo_new_address_form" 
+         data-bind="options: departamentos, 
+                    optionsText: 'text',  
+                    value: ubigeoDepartamento">
+                </select>
+                                
+            </div>
+
+        </div>
+
+        <div class="field _required"  
+             name="shippingAddress.provincia" data-bind="fadeVisible: isCountryLocal()">
+            
+            <label class="label">
+               
+                <span> Cantón </span>
+               
+            </label>
+
+            <div class="control">
+                
+               <select id="selRecojoUbigeoProvincia" 
+               class="shipping_select" 
+               data-bind="options: provincias, 
+                          optionsText: 'text',
+                          value: ubigeoProvincia"></select>
+
+            </div>
+
+        </div>
+
+
+        <div class="field _required"  
+             name="shippingAddress.distrito" data-bind="fadeVisible: isCountryLocal()">
+            
+            <label class="label">
+               
+                <span> Distrito </span>
+               
+            </label>
+
+            <div class="control">
+
+                <select id="selRecojoUbigeoDistrito" 
+               class="shipping_select" 
+               data-bind="options: distritos, 
+                          optionsText: 'text', 
+                          value: ubigeoDistrito"></select>
+
+            </div>
+
+        </div>
+
+        <div id="contenedor-mapa" style="display:none;" >
+          <div id="mapaGeoDecode" style="height:450px;" data-bind="fadeVisible: isCountryLocal()">
+
+          </div>
+          <div class="distancia-label" data-bind="fadeVisible: isCountryLocal()">
+              <span data-bind="html: distanciaMenor">0</span> Km
+          </div>
+        </div>
+
+
+        <!-- ko if: (isCustomerLoggedIn) -->
+        <div class="field choice" data-bind="visible: !isFormInline">
+            <input type="checkbox" class="checkbox" id="shipping-save-in-address-book" data-bind="checked: saveInAddressBook" />
+            <label class="label" for="shipping-save-in-address-book">
+                <span data-bind="i18n: 'Save in address book'"></span>
+            </label>
+        </div>
+        <!-- /ko -->
+    </div>
+</form>

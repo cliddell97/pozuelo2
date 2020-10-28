@@ -1,0 +1,12 @@
+<div class="threedsecure-redirect">
+	<h1><?php echo __("3D Secure Verification")?> </h1>
+	<img src="<?php echo $block->getViewFileUrl('Remmote_Credomaticpayment::images/3dsecurelogos.png');?>"/>
+	<div style="display: none;">
+	<?php 
+	 	echo $block->getCheckoutSession()->getSecureData();
+
+	 	// Empty session
+	 	$block->getCheckoutSession()->setSecureData(null);
+	 ?>
+	 </div>
+</div>

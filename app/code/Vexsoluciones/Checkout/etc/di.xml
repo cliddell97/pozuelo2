@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Vexsoluciones\Checkout\Api\CheckoutInterface"
+                type="Vexsoluciones\Checkout\Model\CheckoutApi" />
+
+ 
+	<type name="Magento\Checkout\Model\ShippingInformationManagement">
+	    <plugin name="save-in-quote" type="Vexsoluciones\Checkout\Plugin\ShippingInformationManagementPlugin" sortOrder="3"/>
+	</type>
+	<type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+	    <plugin name="rewrite-street" type="Vexsoluciones\Checkout\Plugin\LayoutProcessorPlugin" sortOrder="10"/>
+	</type>
+	<type name="Magento\Quote\Model\ShippingAddressManagement">
+	     <plugin name="ShippingAddressManagement_Recojotiendadata" type="Vexsoluciones\Checkout\Plugin\ShippingAddressManagementPlugin"  sortOrder="10" />
+	 </type> 
+
+	 <type name="Magento\Sales\Block\Adminhtml\Order\View\Info">
+        <plugin name="vexsoluciones_tiendas_order_info_shipping_date" type="Vexsoluciones\Checkout\Plugin\Block\Adminhtml\ShippingDate" sortOrder="50" />
+    </type>
+
+    <preference for="Magento\Quote\Model\Quote\Address" type="Vexsoluciones\Checkout\Model\Quote\Address" />
+    
+</config>

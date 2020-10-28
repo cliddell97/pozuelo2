@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+<carriers>
+<shippingcorreosdecostarica>
+<model>Imagineer\ShippingCorreosDeCostaRica\Model\Carrier\Customshipping</model>
+<active>1</active>
+<title>Shipping Correos de Costa Rica</title>
+<name>Envio</name>
+<webservice>http://amistadpro.correos.go.cr:88/wserproduccion/wsAppCorreos.wsAppCorreos.svc</webservice>
+<puerto>88</puerto>
+<user></user>
+<password></password>
+<usuarioid>2</usuarioid>
+<tipocliente>2</tipocliente>
+<servicioid></servicioid>
+<clienteid></clienteid>
+<nombretienda></nombretienda>
+<direccionremitente></direccionremitente>
+<telefonoremitente></telefonoremitente>
+<codigopostalremitente></codigopostalremitente>
+<unidadpeso></unidadpeso>
+<moneda></moneda>
+<montoflete>0</montoflete>
+<gratisGAM></gratisGAM>
+<price>0</price>
+<specificerrmsg>Por favor ingrese un código postal válido.</specificerrmsg>
+<showmethod></showmethod>
+<sallowspecific>0</sallowspecific>
+<sort_order>15</sort_order>
+</shippingcorreosdecostarica>
+</carriers>
+</default>
+</config>

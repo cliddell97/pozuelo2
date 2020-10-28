@@ -1,0 +1,110 @@
+
+<!-- ko if: (visible()) -->
+     
+    <b> Entregar a: </b><!-- ko text: address().prefix --><!-- /ko --> <!-- ko text: address().firstname --><!-- /ko -->
+
+	<!-- ko text: address().lastname --><!-- /ko --> <!-- ko text: address().suffix --><!-- /ko --><br/>
+
+	<b> Direcci&oacute;n: </b>
+	<!-- ko text: address().street --><!-- /ko --><br/>
+
+	<b>Ciudad:</b><!-- ko text: address().city --><!-- /ko --><br/>
+
+	<!-- ko if: address().countryId != 'PE' -->
+	    <!-- ko text: address().region --><!-- /ko --> 
+	    <!-- ko text: address().postcode --><!-- /ko --> <br/>
+	<!-- /ko -->
+	
+	<b> Tel&eacute;fono: </b> 
+	<!-- ko text: address().telephone --><!-- /ko --><br/>
+
+
+	<!-- ko foreach: { data: address().customAttributes, as: 'element' } -->
+	    <!-- ko foreach: { data: Object.keys(element), as: 'attribute' } -->
+	     
+	        <!-- ko if: attribute == 'departamento_label' --> 
+
+	            <b>Provincia: </b>
+	              
+	            <!-- ko if: element[attribute].value != null -->
+	                <!-- ko if: element[attribute].value != '' -->
+	                    <!-- ko text: element[attribute].value --><!-- /ko --> 
+	                <!-- /ko -->
+	                <!-- ko if: element[attribute].value == '' -->
+	                    <!-- ko text: '----' --><!-- /ko --> 
+	                <!-- /ko -->
+	            <!-- /ko -->
+
+	            <!-- ko if: element[attribute].value == null --> 
+
+	                <!-- ko if: element[attribute] != '' -->
+	                    <!-- ko text: element[attribute] --><!-- /ko --> 
+	                <!-- /ko -->
+	                <!-- ko if: element[attribute] == '' -->
+	                    <!-- ko text: '----' --><!-- /ko --> 
+	                <!-- /ko -->
+
+	            <!-- /ko -->
+	            <br/>
+
+	        <!-- /ko -->
+
+	        <!-- ko if: attribute == 'provincia_label' --> 
+
+	            <b>Cantón: </b>
+	              
+	            <!-- ko if: element[attribute].value != null -->
+	                <!-- ko if: element[attribute].value != '' -->
+	                    <!-- ko text: element[attribute].value --><!-- /ko --> 
+	                <!-- /ko -->
+	                <!-- ko if: element[attribute].value == '' -->
+	                    <!-- ko text: '----' --><!-- /ko --> 
+	                <!-- /ko -->
+	            <!-- /ko -->
+
+	            <!-- ko if: element[attribute].value == null --> 
+
+	                <!-- ko if: element[attribute] != '' -->
+	                    <!-- ko text: element[attribute] --><!-- /ko --> 
+	                <!-- /ko -->
+	                <!-- ko if: element[attribute] == '' -->
+	                    <!-- ko text: '----' --><!-- /ko --> 
+	                <!-- /ko -->
+
+	            <!-- /ko -->
+	            <br/>
+
+	        <!-- /ko -->
+
+	        <!-- ko if: attribute == 'distrito_label' --> 
+
+	            <b>Distrito: </b>
+	              
+	            <!-- ko if: element[attribute].value != null -->
+	                <!-- ko if: element[attribute].value != '' -->
+	                    <!-- ko text: element[attribute].value --><!-- /ko --> 
+	                <!-- /ko -->
+	                <!-- ko if: element[attribute].value == '' -->
+	                    <!-- ko text: '----' --><!-- /ko --> 
+	                <!-- /ko -->
+	            <!-- /ko -->
+
+	            <!-- ko if: element[attribute].value == null --> 
+
+	                <!-- ko if: element[attribute] != '' -->
+	                    <!-- ko text: element[attribute] --><!-- /ko --> 
+	                <!-- /ko -->
+	                <!-- ko if: element[attribute] == '' -->
+	                    <!-- ko text: '----' --><!-- /ko --> 
+	                <!-- /ko -->
+
+	            <!-- /ko -->
+	            <br/>
+
+	        <!-- /ko -->
+
+	     <!-- /ko -->
+	<!-- /ko -->
+	
+
+<!-- /ko -->

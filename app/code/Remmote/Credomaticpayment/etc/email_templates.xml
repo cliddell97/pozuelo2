@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 remmote.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:Magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="payment_credomatic_failedpayment_template" label="Credomatic Failed Payment via 3D Secure" file="failedpayment_3dsecure.html" type="html" module="Remmote_Credomaticpayment" area="frontend"/>
+
+    <template id="payment_credomatic_successpayment_template" label="Credomatic Success Payment" file="success_payment.html" type="html" module="Remmote_Credomaticpayment" area="frontend"/>
+
+</config>

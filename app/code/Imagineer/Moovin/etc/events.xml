@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_model_service_quote_submit_before">
+        <observer name="guardar_coordenadas" instance="Imagineer\Moovin\Observer\SaveOrderObserver" />
+    </event>
+    <event name="sales_order_shipment_save_after">
+        <observer name="enviarqr" instance="Imagineer\Moovin\Observer\ProcessShipment" />
+    </event>
+</config>
+
+

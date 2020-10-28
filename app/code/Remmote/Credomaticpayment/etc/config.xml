@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 remmote.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <credomatic>
+                <active>1</active>
+                <model>Remmote\Credomaticpayment\Model\Payment\Credomatic</model>
+                <title>Credomatic</title>
+                <payment_action>authorize_capture</payment_action>
+                <order_status>processing</order_status>
+                <cctypes>AE,VI,MC,DI,JCB</cctypes>
+                <useccv>1</useccv>
+                <multiple_currencies>0</multiple_currencies>
+                <credomatic_endpoint>https://credomatic.compassmerchantsolutions.com/api/transact.php</credomatic_endpoint>
+            </credomatic>
+        </payment>
+    </default>
+</config>

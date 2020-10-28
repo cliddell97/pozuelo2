@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+<default>
+<carriers>
+<recogeruruca>
+<model>Imagineer\RecogerUruca\Model\Carrier\Customshipping</model>
+<active>1</active>
+<sort_order>15</sort_order>
+<sallowspecific>0</sallowspecific>
+<price>0</price>
+<name>Store pick-up</name>
+<title>Recoger en Uruca</title>
+<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+</recogeruruca>
+</carriers>
+</default>
+</config>

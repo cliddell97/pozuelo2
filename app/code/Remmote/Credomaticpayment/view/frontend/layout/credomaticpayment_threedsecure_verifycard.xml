@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+ <!--
+/**
+ * Copyright © 2017 remmote.com
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <head>
+		<css src='Remmote_Credomaticpayment::css/style.css' media='screen' rel='stylesheet' type='text/css'/>
+	</head>
+	<referenceContainer name="content">
+		<block class="Remmote\Credomaticpayment\Block\Threedsecure" name="threedsecure.verifycard" template="Remmote_Credomaticpayment::threedsecure_verifycard.phtml" cacheable="false"/>			
+	</referenceContainer>
+</page>
